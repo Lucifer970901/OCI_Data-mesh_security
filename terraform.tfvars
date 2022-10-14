@@ -9,5 +9,5 @@ private_key_path = "C:/Users/megn/Documents/Auto_scripts/terraform/oci_api_key.p
 region = "ap-sydney-1"
 
 # Compartment
-compartment_ocid = "ocid1.compartment.oc1..aaaaaaaahp72cnaypqte2fq5ett7h2iabi43gyres6szbfcixdtccfkf6t2a"
+compartment_ocid = "ocid1.compartment.oc1..aaaaaaaat24gidmgahbtarfaakfwao2b37lyy7tqi3obcwpcv7k7uoo6p76a"
 
