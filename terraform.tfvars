@@ -1,12 +1,13 @@
 #tenancy and user information
-tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaalylrk6bjiuxqryukd6jrlxgfbwjuulnavxqehvv3crknt7ewhlpa"
-user_ocid = "ocid1.user.oc1..aaaaaaaaxtciqwuwtcvf37ef3oey5qunm27pns4gq2w56bxold73lstsmaeq"
-fingerprint= "9a:5a:4a:31:bb:45:a0:72:94:af:be:a1:64:bc:78:6a"
+tenancy_ocid = "ocid1.tenancy.oc1..aaaaaaaa5nras26nkpnlcd4g3ox6gfmzjaahxwb245stlrh7krkfrpu2nu5q"
+user_ocid = "ocid1.user.oc1..aaaaaaaa3su67jfgj6k7vkn2iir67ita47yitpar7fns2snfgeefo4ylxl7a"
+fingerprint= "09:fd:0f:58:f5:d3:d0:c4:7d:f8:6a:a6:de:19:c2:fd"
 private_key_path = "C:/Users/megn/Documents/Auto_scripts/terraform/oci_api_key.pem"
 
 
 # Region
-region = "us-ashburn-1"
+region = "ap-sydney-1"
 
 # Compartment
-compartment_ocid = "ocid1.compartment.oc1..aaaaaaaaukottugsmj5vmneywbzvecjbg5pew2b7clgnm53zwyvgdutdiwvq"
+compartment_ocid = "ocid1.compartment.oc1..aaaaaaaahp72cnaypqte2fq5ett7h2iabi43gyres6szbfcixdtccfkf6t2a"
+
