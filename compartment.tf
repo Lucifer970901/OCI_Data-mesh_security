@@ -1,5 +1,5 @@
 #resource block for compartment retail (main compartment)
-resource "oci_identity_compartment" "compartmentRetail" {
+resource "oci_identity_compartment" "compartment" {
   provider       = oci.home
   compartment_id = var.compartment_ocid
   description    = "create a comparment within your main compartment"
@@ -8,7 +8,7 @@ resource "oci_identity_compartment" "compartmentRetail" {
 }
 
 resource "time_sleep" "wait_60_seconds" {
-  depends_on = [oci_identity_compartment.compartmentRetail]
+  depends_on = [oci_identity_compartment.compartment]
 
   create_duration = "60s"
 }
@@ -16,7 +16,7 @@ resource "time_sleep" "wait_60_seconds" {
 #resource block for compartment retail 
 resource "oci_identity_compartment" "compartmentProduct" {
   provider       = oci.home
-  compartment_id = oci_idenity_compartment.compartmentRetail.id
+  compartment_id = oci_idenity_compartment.compartment.id
   description    = "create a comparment within your Retail compartment"
   name           = "Product-Domain"
   #region  = var.home_region
@@ -25,7 +25,7 @@ resource "oci_identity_compartment" "compartmentProduct" {
 #resource block for compartment retail (main compartment)
 resource "oci_identity_compartment" "compartmentCustomer" {
   provider       = oci.home
-  compartment_id = oci_idenity_compartment.compartmentRetail.id
+  compartment_id = oci_idenity_compartment.compartment.id
   description    = "create a comparment within your Retail compartment"
   name           = "Customer-Domain"
   #region  = var.home_region
@@ -34,7 +34,7 @@ resource "oci_identity_compartment" "compartmentCustomer" {
 #resource block for compartment retail (main compartment)
 resource "oci_identity_compartment" "compartmentSales" {
   provider       = oci.home
-  compartment_id = oci_idenity_compartment.compartmentRetail.id
+  compartment_id = oci_idenity_compartment.compartment.id
   description    = "create a comparment within your Retail compartment"
   name           = "Sales-Domain"
   #region  = var.home_region
@@ -43,7 +43,7 @@ resource "oci_identity_compartment" "compartmentSales" {
 #resource block for compartment retail (main compartment)
 resource "oci_identity_compartment" "compartmentDataOps" {
   provider       = oci.home
-  compartment_id = oci_idenity_compartment.compartmentRetail.id
+  compartment_id = oci_idenity_compartment.compartment.id
   description    = "create a comparment within your Retail compartment"
   name           = "DataOps-Shared"
   #region  = var.home_region
@@ -52,7 +52,7 @@ resource "oci_identity_compartment" "compartmentDataOps" {
 #resource block for compartment retail (main compartment)
 resource "oci_identity_compartment" "compartmentDatabase" {
   provider       = oci.home
-  compartment_id = oci_idenity_compartment.compartmentRetail.id
+  compartment_id = oci_idenity_compartment.compartment.id
   description    = "create a comparment within your Retail compartment"
   name           = "Database"
   #region  = var.home_region
@@ -61,7 +61,7 @@ resource "oci_identity_compartment" "compartmentDatabase" {
 #resource block for compartment retail (main compartment)
 resource "oci_identity_compartment" "compartmentNetworking" {
   provider       = oci.home
-  compartment_id = oci_idenity_compartment.compartmentRetail.id
+  compartment_id = oci_idenity_compartment.compartment.id
   description    = "create a comparment within your Retail compartment"
   name           = "Networking"
   #region  = var.home_region
@@ -70,7 +70,7 @@ resource "oci_identity_compartment" "compartmentNetworking" {
 #resource block for compartment retail (main compartment)
 resource "oci_identity_compartment" "compartmentSecurity" {
   provider       = oci.home
-  compartment_id = oci_idenity_compartment.compartmentRetail.id
+  compartment_id = oci_idenity_compartment.compartment.id
   description    = "create a comparment within your Retail compartment"
   name           = "Security"
   #region  = var.home_region
