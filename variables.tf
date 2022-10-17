@@ -40,13 +40,13 @@ variable "vcn_dns_label" {
 
 variable "vcn_display_name" {
   description = "provide a display name for vcn"
-  default     = "vcn_by_terraform"
+  default     = "retail-sydney-vcn"
 }
 
 #variables to define the public subnet
 variable "cidr_block_publicsubnet"{
 description = "note that the cidr block for the subnet must be smaller and part of the vcn cidr block"
-#default = "192.168.1.0/24"
+default = "192.168.1.0/24"
 }
 
 variable "publicSubnet_dns_label" {
@@ -55,5 +55,6 @@ description = "A DNS label prefix for the subnet, used in conjunction with the V
 }
 variable "display_name_publicsubnet"{
 description = "privide a displayname for public subnet"
+default     = "publicsubnet"
 }
 
