@@ -59,3 +59,8 @@ default     = "publicsubnet"
 }
 
 #bucket variables
+variable "bucket_namespace"{
+description = "namespace of the bucket"
+default = "apaccpt03"
+}
+
