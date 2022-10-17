@@ -43,4 +43,17 @@ variable "vcn_display_name" {
   default     = "vcn_by_terraform"
 }
 
+#variables to define the public subnet
+variable "cidr_block_publicsubnet"{
+description = "note that the cidr block for the subnet must be smaller and part of the vcn cidr block"
+#default = "192.168.1.0/24"
+}
+
+variable "publicSubnet_dns_label" {
+description = "A DNS label prefix for the subnet, used in conjunction with the VNIC's hostname and VCN's DNS label to form a fully qualified domain name (FQDN) for each VNIC within this subnet. "
+  default     = "publicsubnet"
+}
+variable "display_name_publicsubnet"{
+description = "privide a displayname for public subnet"
+}
 
