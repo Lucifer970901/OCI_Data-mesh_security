@@ -27,7 +27,7 @@ provider "oci" {
   region           = var.region2
   user_ocid        = var.user_ocid
 }
-
+# Network variables
 variable "vcn_cidr_block" {
   description = "provide the valid IPV4 cidr block for vcn"
   default     = "192.168.0.0/16"
@@ -58,3 +58,4 @@ description = "privide a displayname for public subnet"
 default     = "publicsubnet"
 }
 
+#bucket variables
