@@ -1,7 +1,7 @@
 #resource block for oci vcn.
 resource "oci_core_vcn" "test_vcn" {
     #Required
-    
+    provider = oci.region2
     cidr_block = var.vcn_cidr_block
     compartment_id = oci_identity_compartment.compartmentNetworking.id
     display_name = var.vcn_display_name
@@ -11,25 +11,28 @@ resource "oci_core_vcn" "test_vcn" {
 
 #resource block for defining public subnet
 resource "oci_core_subnet" "publicsubnet"{
-dns_label = var.publicSubnet_dns_label
-compartment_id = oci_identity_compartment.compartmentNetworking.id
-vcn_id = oci_core_vcn.test_vcn.id
-display_name = var.display_name_publicsubnet
-cidr_block = var.cidr_block_publicsubnet
-route_table_id = oci_core_route_table.publicRT.id
-security_list_ids = [oci_core_security_list.publicSL.id]
+    provider = oci.region2
+    dns_label = var.publicSubnet_dns_label
+    compartment_id = oci_identity_compartment.compartmentNetworking.id
+    vcn_id = oci_core_vcn.test_vcn.id
+    display_name = var.display_name_publicsubnet
+    cidr_block = var.cidr_block_publicsubnet
+    route_table_id = oci_core_route_table.publicRT.id
+    security_list_ids = [oci_core_security_list.publicSL.id]
 }
 
 #resource block for internet gateway
 resource "oci_core_internet_gateway" "test_internet_gateway" {
-  compartment_id = oci_identity_compartment.compartmentNetworking.id
-  vcn_id         = oci_core_vcn.test_vcn.id
+    provider = oci.region2
+    compartment_id = oci_identity_compartment.compartmentNetworking.id
+    vcn_id         = oci_core_vcn.test_vcn.id
 }
 
 #resource block for route table with route rule for internet gateway
 resource "oci_core_route_table" "publicRT" {
-  vcn_id = oci_core_vcn.test_vcn.id
-compartment_id = oci_identity_compartment.compartmentNetworking.id
+    provider = oci.region2
+    vcn_id = oci_core_vcn.test_vcn.id
+    compartment_id = oci_identity_compartment.compartmentNetworking.id
 
   route_rules {
     destination       = "0.0.0.0/0"
@@ -39,9 +42,10 @@ compartment_id = oci_identity_compartment.compartmentNetworking.id
 
 #resource block for security list
 resource "oci_core_security_list" "publicSL" {
-  compartment_id = oci_identity_compartment.compartmentNetworking.id
-  vcn_id         = oci_core_vcn.test_vcn.id
-  display_name   = "public_security_list"
+    provider = oci.region2
+    compartment_id = oci_identity_compartment.compartmentNetworking.id
+    vcn_id         = oci_core_vcn.test_vcn.id
+    display_name   = "public_security_list"
 
   egress_security_rules {
     protocol    = "all"
