@@ -1,6 +1,7 @@
 #resource block for oci vcn.
 resource "oci_core_vcn" "test_vcn" {
     #Required
+    
     cidr_block = var.vcn_cidr_block
     compartment_id = oci_identity_compartment.compartmentNetworking.id
     display_name = var.vcn_display_name
