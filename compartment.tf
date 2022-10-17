@@ -2,7 +2,7 @@
 resource "oci_identity_compartment" "compartment" {
   provider       = oci.home
   compartment_id = var.compartment_ocid
-  description    = "create a comparment within your main compartment"
+  description    = "create Retail comparment within your main compartment"
   name           = "Retail"
   #region  = var.home_region
 }
