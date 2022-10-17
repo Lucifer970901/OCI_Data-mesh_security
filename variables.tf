@@ -62,5 +62,34 @@ default     = "publicsubnet"
 variable "bucket_namespace"{
 description = "namespace of the bucket"
 default = "apaccpt03"
+    
+}
+# dataflow application variables
+variable "display_name" {
+description = "data flow application name"
+ default = "Product_application"
 }
 
+variable "driver_shape"{
+default = "VM.Standard.E4.Flex"
+}
+
+variable "executor_shape"{
+default = "VM.Standard.E4.Flex"
+}
+
+variable "file_uri"{
+default = "oci://bucket-20221011-1918@sehubjapacprod/transform_script_data_transform_script_hardcoded.py"
+}
+
+variable "language"{
+default = "python"
+}
+
+variable "num_executors"{
+default = "1"
+}
+
+variable "spark_version"{
+default = "Spark 3.2.1"
+}
