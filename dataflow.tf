@@ -15,6 +15,7 @@ resource "oci_dataflow_application" "test_application" {
         log_group_id = oci_logging_log_group.test_log_group.id
         log_id = oci_logging_log.test_log.id
     }
+    
     archive_uri = var.application_archive_uri
     arguments = var.application_arguments
     class_name = var.application_class_name
