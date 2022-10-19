@@ -93,3 +93,29 @@ default = "1"
 variable "spark_version"{
 default = "Spark 3.2.1"
 }
+#object variables
+
+variable "object_content"{
+default = "/data/transform_script_data_transform_script_hardcoded.py"
+}
+
+variable "object_namespace"{
+ default = "apaccpt03"
+}
+
+variable "object_object"{
+default = "dataflow_object"
+}
+
+variable "object_content_type"{
+default = "text/x-python-script"
+}
+
+variable "object_content_encoding"{
+default = "alhg9E/Ce/s/WNDQVCmsAg=="
+}
+
+variable "object_storage_tier"{
+    default = "standard"
+}
+
