@@ -86,3 +86,12 @@ resource "oci_core_security_list" "publicSL" {
     source   = "0.0.0.0/0"
   }
 }
+
+resource "oci_core_network_security_group" "dataflow_network_security_group" {
+    #Required
+    compartment_id = oci_identity_compartment.compartmentNetworking.id
+    vcn_id = oci_core_vcn.test_vcn.id
+    #Optional
+    display_name = "dataflow_network_security_group"
+}
+
