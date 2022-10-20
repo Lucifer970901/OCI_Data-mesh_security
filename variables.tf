@@ -101,7 +101,7 @@ default = "Spark 3.2.1"
 #object variables
 
 variable "object_content"{
-default = "/data/transform_script_data_transform_script_hardcoded.py"
+default = "data/transform_script_data_transform_script_hardcoded.py"
 }
 
 variable "object_namespace"{
