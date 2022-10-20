@@ -7,7 +7,7 @@ resource "oci_dataflow_private_endpoint" "test_private_endpoint" {
     #Optional
     display_name = var.private_endpoint_display_name
     max_host_count = var.private_endpoint_max_host_count
-    nsg_ids = var.private_endpoint_nsg_ids
+    #nsg_ids = var.private_endpoint_nsg_ids
 }
 
 resource "oci_dataflow_application" "test_application" {
@@ -36,7 +36,7 @@ resource "oci_dataflow_application" "test_application" {
     }
 
   
-    private_endpoint_id = oci_dataflow_private_endpoint.test_private_endpoint.id
-    type = var.application_type
+   # private_endpoint_id = oci_dataflow_private_endpoint.test_private_endpoint.id
+   # type = var.application_type
     
 }
