@@ -62,8 +62,12 @@ default     = "publicsubnet"
 variable "bucket_namespace"{
 description = "namespace of the bucket"
 default = "apaccpt03"
-    
 }
+
+variable "bucket_access_type"{
+default = "NoPublicAccess"
+}
+
 # dataflow application variables
 variable "display_name" {
 description = "data flow application name"
@@ -89,6 +93,7 @@ default = "python"
 variable "num_executors"{
 default = "1"
 }
+
 
 variable "spark_version"{
 default = "Spark 3.2.1"
