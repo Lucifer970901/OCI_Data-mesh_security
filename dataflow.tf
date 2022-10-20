@@ -37,5 +37,5 @@ resource "oci_dataflow_application" "test_application" {
   
    # private_endpoint_id = oci_dataflow_private_endpoint.test_private_endpoint.id
    # type = var.application_type
-    
+   
 }
