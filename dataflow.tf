@@ -20,7 +20,6 @@ resource "oci_dataflow_application" "test_application" {
     language = var.application_language
     num_executors = var.application_num_executors
     spark_version = var.application_spark_version
-    configuration = var.application_configuration
     driver_shape_config {
 
         #Optional
