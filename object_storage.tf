@@ -34,7 +34,7 @@ resource "oci_objectstorage_bucket" "dataOps_bucket" {
 #resources object
 resource "oci_objectstorage_object" "product_object" {
     #Required
-    bucket = "Product_Bucket"
+    bucket =oci_objectstorage_bucket.product_bucket.name
     content = file(var.object_content)
     namespace = var.object_namespace
     object = var.object_object
