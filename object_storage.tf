@@ -32,7 +32,7 @@ resource "oci_objectstorage_bucket" "dataOps_bucket" {
 }
 
 #resources object
-esource "oci_objectstorage_object" "product_object" {
+resource "oci_objectstorage_object" "product_object" {
     #Required
     bucket = "Product_Bucket"
     content = var.object_content
