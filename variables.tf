@@ -92,6 +92,17 @@ variable "object_storage_tier"{
 }
 
 # dataflow application variables
+variable "private_endpoint_display_name"{
+default = "dataflow_private_endpoint"
+}
+
+variable "private_endpoint_max_host_count"{
+default = "256"
+}
+
+variable "private_endpoint_nsg_ids"{
+default = ""
+}
 
 variable "display_name" {
 description = "data flow application name"
