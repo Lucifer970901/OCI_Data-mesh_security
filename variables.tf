@@ -130,7 +130,7 @@ default = "1"
 }
 
 variable "application_spark_version"{
-default = "Spark 4.96.0"
+default = "3.2.1"
 }
 
 
