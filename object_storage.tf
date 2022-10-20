@@ -42,5 +42,7 @@ resource "oci_objectstorage_object" "product_object" {
     #Optional
     storage_tier = var.object_storage_tier
     content_type = var.object_content_type
-   
+    content_type        = "text/x-python-script"
+    content_disposition = "attachment; filename=\"transform_script_data_transform_script_hardcoded.py\""
+    content_encoding = filemd5("var.object_content")
 }
