@@ -104,30 +104,32 @@ variable "private_endpoint_nsg_ids"{
 default = ""
 }
 
-variable "display_name" {
+variable "application_display_name" {
 description = "data flow application name"
  default = "Product_application"
 }
 
-variable "driver_shape"{
+variable "application_driver_shape"{
 default = "VM.Standard.E4.Flex"
 }
 
-variable "executor_shape"{
+
+variable "application_executor_shape"{
 default = "VM.Standard.E4.Flex"
 }
 
-variable "language"{
+variable "application_language"{
 default = "python"
 }
 
-variable "num_executors"{
+variable "application_num_executors"{
 default = "1"
 }
 
-variable "spark_version"{
+variable "application_spark_version"{
 default = "Spark 3.2.1"
 }
+
 
 variable "application_driver_shape_config_memory_in_gbs"{
 default = "16"
