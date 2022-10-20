@@ -109,7 +109,7 @@ description = "data flow application name"
  default = "Product_application"
 }
 variable "application_file_uri"{
-default = ""
+default = "oci://Product_Bucket@apaccpt03/dataflow_object.py"
 }
 
 variable "application_driver_shape"{
