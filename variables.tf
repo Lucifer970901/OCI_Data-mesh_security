@@ -108,6 +108,9 @@ variable "application_display_name" {
 description = "data flow application name"
  default = "Product_application"
 }
+variable "application_file_uri"{
+default = ""
+}
 
 variable "application_driver_shape"{
 default = "VM.Standard.E4.Flex"
