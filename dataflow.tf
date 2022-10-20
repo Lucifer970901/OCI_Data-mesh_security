@@ -1,14 +1,14 @@
-resource "oci_dataflow_private_endpoint" "test_private_endpoint" {
+#resource "oci_dataflow_private_endpoint" "test_private_endpoint" {
     #Required
-    compartment_id = var.compartment_id
-    dns_zones = var.private_endpoint_dns_zones
-    subnet_id = oci_core_subnet.publicsubnet.id
+ #   compartment_id = oci_identity_compartment.compartmentProduct.id
+  #  dns_zones = var.private_endpoint_dns_zones
+   # subnet_id = oci_core_subnet.publicsubnet.id
 
     #Optional
-    display_name = var.private_endpoint_display_name
-    max_host_count = var.private_endpoint_max_host_count
+    #display_name = var.private_endpoint_display_name
+    #max_host_count = var.private_endpoint_max_host_count
     #nsg_ids = var.private_endpoint_nsg_ids
-}
+#}
 
 resource "oci_dataflow_application" "test_application" {
     #Required
