@@ -41,5 +41,6 @@ resource "oci_objectstorage_object" "product_object" {
 
     #Optional
     storage_tier = var.object_storage_tier
+    content_type = var.object_content_type
    
 }
