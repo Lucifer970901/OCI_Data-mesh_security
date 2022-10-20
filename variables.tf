@@ -109,7 +109,7 @@ variable "object_namespace"{
 }
 
 variable "object_object"{
-default = "dataflow_object"
+default = "dataflow_object.py"
 }
 
 variable "object_content_type"{
