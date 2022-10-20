@@ -26,7 +26,7 @@ resource "oci_dataflow_application" "test_application" {
         memory_in_gbs = var.application_driver_shape_config_memory_in_gbs
         ocpus = var.application_driver_shape_config_ocpus
     }
-    execute = var.application_execute
+    #execute = var.application_execute
     executor_shape_config {
 
         #Optional
