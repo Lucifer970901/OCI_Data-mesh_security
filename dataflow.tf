@@ -16,7 +16,7 @@ resource "oci_dataflow_application" "test_application" {
     display_name = var.application_display_name
     driver_shape = var.application_driver_shape
     executor_shape = var.application_executor_shape
-    file_uri = oci_objectstorage_object.product_object.source_uri_details
+    file_uri = var.application_file_uri
     language = var.application_language
     num_executors = var.application_num_executors
     spark_version = var.application_spark_version
