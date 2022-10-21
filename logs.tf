@@ -1,6 +1,6 @@
 resource "oci_logging_log_group" "product_log_group" {
     #Required
-    compartment_id = oci_identity_compartment.productCompartment.id
+    compartment_id = oci_identity_compartment.compartmentProduct.id
     display_name = var.log_group_display_name
 }
 
@@ -22,7 +22,7 @@ resource "oci_logging_log" "test_log" {
         #}
 
         #Optional
-        compartment_id = oci_identity_compartment.productCompartment.id
+        compartment_id = oci_identity_compartment.compartmentProduct.id
  #   }
     is_enabled = "enabled"
     retention_duration = "60"
