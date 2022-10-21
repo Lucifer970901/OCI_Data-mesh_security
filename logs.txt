@@ -1,11 +1,13 @@
 resource "oci_logging_log_group" "product_log_group" {
     #Required
+    provider = oci.region2
     compartment_id = oci_identity_compartment.compartmentProduct.id
     display_name = var.log_group_display_name
 }
 
 resource "oci_logging_log" "test_log" {
     #Required
+    provider = oci.region2
     display_name = "Product_log"
     log_group_id = oci_logging_log_group.product_log_group.id
     log_type = var.log_log_type
