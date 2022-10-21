@@ -51,7 +51,7 @@ resource "oci_objectstorage_bucket" "dataOps_bucket" {
     provider = oci.region2  
     compartment_id = oci_identity_compartment.compartmentDataOps.id
     name = "DataOps_bucket"
-    namespace = var.bucket_namespace
+    namespace = data.oci_objectstorage_namespace.ns.namespace
     access_type = var.bucket_access_type
 }
 
