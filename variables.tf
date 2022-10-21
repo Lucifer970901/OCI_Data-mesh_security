@@ -150,6 +150,10 @@ variable "application_executor_shape_config_ocpus"{
 default = "1"
 }
 
+variable "application_logs_bucket_uri"{
+default = "oci://Product_Bucket@apaccpt03"
+}
+
 #log variable
 variable "log_group_display_name"{
 default = "Product_log_group"
