@@ -11,6 +11,11 @@ resource "oci_objectstorage_bucket" "product_bucket" {
     namespace = data.oci_objectstorage_namespace.ns.namespace
     access_type = var.bucket_access_type
 }
+resource "time_sleep" "wait_60_seconds" {
+  depends_on = [oci_objectstorage_bucket.product_bucket]
+
+  create_duration = "60s"
+}
 
 resource "oci_objectstorage_bucket" "customer_bucket" {
     #Required
@@ -19,6 +24,11 @@ resource "oci_objectstorage_bucket" "customer_bucket" {
     namespace = data.oci_objectstorage_namespace.ns.namespace
     access_type = var.bucket_access_type
 }
+resource "time_sleep" "wait_60_seconds" {
+  depends_on = [oci_objectstorage_bucket.customer_bucket]
+
+  create_duration = "60s"
+}
 
 resource "oci_objectstorage_bucket" "sales_bucket" {
     #Required
@@ -26,6 +36,11 @@ resource "oci_objectstorage_bucket" "sales_bucket" {
     name = "Sales_Bucket"
     namespace = data.oci_objectstorage_namespace.ns.namespace
     access_type = var.bucket_access_type
+}
+resource "time_sleep" "wait_60_seconds" {
+  depends_on = [oci_objectstorage_bucket.sales_bucket]
+
+  create_duration = "60s"
 }
 
 resource "oci_objectstorage_bucket" "dataOps_bucket" {
@@ -50,7 +65,7 @@ resource "oci_objectstorage_object" "product_object" {
     content_encoding = filemd5(var.object_content)
 }
 
-#resources product object
+#resources customer object
 resource "oci_objectstorage_object" "customer_object" {
     #Required
     bucket =oci_objectstorage_bucket.customer_bucket.name
@@ -64,7 +79,7 @@ resource "oci_objectstorage_object" "customer_object" {
     content_encoding = filemd5(var.object_content)
 }
 
-#resources product object
+#resources sales object
 resource "oci_objectstorage_object" "sales_object" {
     #Required
     bucket =oci_objectstorage_bucket.sales_bucket.name
