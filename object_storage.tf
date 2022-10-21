@@ -12,7 +12,7 @@ resource "oci_objectstorage_bucket" "product_bucket" {
     namespace = data.oci_objectstorage_namespace.ns.namespace
     access_type = var.bucket_access_type
 }
-resource "time_sleep" "wait_60_seconds" {
+resource "time_sleep" "wait_60_seconds1" {
   depends_on = [oci_objectstorage_bucket.product_bucket]
 
   create_duration = "60s"
@@ -26,7 +26,7 @@ resource "oci_objectstorage_bucket" "customer_bucket" {
     namespace = data.oci_objectstorage_namespace.ns.namespace
     access_type = var.bucket_access_type
 }
-resource "time_sleep" "wait_60_seconds" {
+resource "time_sleep" "wait_60_seconds2" {
   depends_on = [oci_objectstorage_bucket.customer_bucket]
 
   create_duration = "60s"
@@ -40,7 +40,7 @@ resource "oci_objectstorage_bucket" "sales_bucket" {
     namespace = data.oci_objectstorage_namespace.ns.namespace
     access_type = var.bucket_access_type
 }
-resource "time_sleep" "wait_60_seconds" {
+resource "time_sleep" "wait_60_seconds3" {
   depends_on = [oci_objectstorage_bucket.sales_bucket]
 
   create_duration = "60s"
