@@ -159,6 +159,8 @@ variable "log_log_type"{
 default = "custom"
 }
 
-#variable "
+variable "is_log_enabled"{
+default = "1"
+}
 
 
