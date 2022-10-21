@@ -104,12 +104,26 @@ variable "private_endpoint_nsg_ids"{
 default = ""
 }
 
-variable "application_display_name" {
+variable "product_application_display_name" {
 description = "data flow application name"
  default = "Product_application"
 }
-variable "application_file_uri"{
+variable "customer_application_display_name" {
+description = "data flow application name"
+ default = "Customer_application"
+}
+variable "sales_application_display_name" {
+description = "data flow application name"
+ default = "Sales_application"
+}
+variable "product_application_file_uri"{
 default = "oci://Product_Bucket@apaccpt03/dataflow_object.py"
+}
+variable "customer_application_file_uri"{
+default = "oci://Customer_Bucket@apaccpt03/dataflow_object.py"
+}
+variable "sales_application_file_uri"{
+default = "oci://Sales_Bucket@apaccpt03/dataflow_object.py"
 }
 
 variable "application_driver_shape"{
@@ -150,8 +164,14 @@ variable "application_executor_shape_config_ocpus"{
 default = "1"
 }
 
-variable "application_logs_bucket_uri"{
+variable "product_application_logs_bucket_uri"{
 default = "oci://Product_Bucket@apaccpt03"
+}
+variable "customer_application_logs_bucket_uri"{
+default = "oci://Customer_Bucket@apaccpt03"
+}
+variable "sales_application_logs_bucket_uri"{
+default = "oci://Sales_Bucket@apaccpt03"
 }
 
 #log variable
