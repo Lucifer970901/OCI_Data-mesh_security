@@ -1,3 +1,7 @@
+output "namespace" {
+  value = data.oci_objectstorage_namespace.ns.namespace
+}
+
 output "object_data" {
   value = <<EOF
   content = ${oci_objectstorage_object.product_object.content}
