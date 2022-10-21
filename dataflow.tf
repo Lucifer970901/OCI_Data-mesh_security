@@ -20,6 +20,7 @@ resource "oci_dataflow_application" "test_application" {
     language = var.application_language
     num_executors = var.application_num_executors
     spark_version = var.application_spark_version
+    logs_bucket_uri = var.application_logs_bucket_uri
  #   application_log_config {
         #Required
  #       log_group_id = oci_logging_log_group.test_log_group.id
