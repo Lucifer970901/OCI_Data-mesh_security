@@ -38,6 +38,7 @@ resource "oci_core_internet_gateway" "test_internet_gateway" {
     provider = oci.region2
     compartment_id = oci_identity_compartment.compartmentNetworking.id
     vcn_id         = oci_core_vcn.test_vcn.id
+   # route_table_id = oci_core_route_table.publicRT.id
 }
 
 resource "oci_core_nat_gateway" "test_nat_gateway" {
@@ -46,10 +47,7 @@ resource "oci_core_nat_gateway" "test_nat_gateway" {
     vcn_id = oci_core_vcn.test_vcn.id
 
     #Optional
-    block_traffic = var.nat_gateway_block_traffic
-  
-    public_ip_id = oci_core_public_ip.test_public_ip.id
-    route_table_id = oci_core_route_table.test_route_table.id
+    #route_table_id = oci_core_route_table.privateRT.id
 }
 
 #resource block for route table with route rule for internet gateway
