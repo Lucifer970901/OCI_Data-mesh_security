@@ -149,3 +149,16 @@ default = "16"
 variable "application_executor_shape_config_ocpus"{
 default = "1"
 }
+
+#log variable
+variable "log_group_display_name"{
+default = "Product_log_group"
+}
+
+variable "log_log_type"{
+default = "custom"
+}
+
+#variable "
+
+
