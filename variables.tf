@@ -58,12 +58,21 @@ description = "privide a displayname for public subnet"
 default     = "publicsubnet"
 }
 
-#bucket variables
-
-variable "bucket_namespace"{
-description = "namespace of the bucket"
-default = "apaccpt03"
+#variables to define the private subnet
+variable "cidr_block_privatesubnet"{
+description = "note that the cidr block for the subnet must be smaller and part of the vcn cidr block"
+default = "192.168.2.0/24"
 }
+
+variable "privateSubnet_dns_label" {
+description = "A DNS label prefix for the subnet, used in conjunction with the VNIC's hostname and VCN's DNS label to form a fully qualified domain name (FQDN) for each VNIC within this subnet. "
+  default     = "privatesubnet"
+}
+variable "display_name_privatesubnet"{
+description = "privide a displayname for public subnet"
+default     = "privatesubnet"
+}
+#bucket variables
 
 variable "bucket_access_type"{
 default = "NoPublicAccess"
@@ -72,11 +81,7 @@ default = "NoPublicAccess"
 #object variables
 
 variable "object_content"{
-default = "data/transform_script_data_transform_script_hardcoded.py"
-}
-
-variable "object_namespace"{
- default = "apaccpt03"
+default = "data/data_transform.py"
 }
 
 variable "object_object"{
@@ -125,6 +130,15 @@ default = "oci://Customer_Bucket@apaccpt03/dataflow_object.py"
 variable "sales_application_file_uri"{
 default = "oci://Sales_Bucket@apaccpt03/dataflow_object.py"
 }
+variable "product_application_logs_bucket_uri"{
+default = "oci://Product_Bucket@apaccpt03"
+}
+variable "customer_application_logs_bucket_uri"{
+default = "oci://Customer_Bucket@apaccpt03"
+}
+variable "sales_application_logs_bucket_uri"{
+default = "oci://Sales_Bucket@apaccpt03"
+}
 
 variable "application_driver_shape"{
 default = "VM.Standard.E4.Flex"
@@ -164,15 +178,6 @@ variable "application_executor_shape_config_ocpus"{
 default = "1"
 }
 
-variable "product_application_logs_bucket_uri"{
-default = "oci://Product_Bucket@apaccpt03"
-}
-variable "customer_application_logs_bucket_uri"{
-default = "oci://Customer_Bucket@apaccpt03"
-}
-variable "sales_application_logs_bucket_uri"{
-default = "oci://Sales_Bucket@apaccpt03"
-}
 
 #log variable
 variable "log_group_display_name"{
