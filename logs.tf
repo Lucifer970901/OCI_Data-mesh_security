@@ -24,6 +24,6 @@ resource "oci_logging_log" "test_log" {
         #Optional
        # compartment_id = oci_identity_compartment.compartmentProduct.id
  #   }
-    is_enabled = "enabled"
+    is_enabled = "yes"
     retention_duration = "60"
 }
