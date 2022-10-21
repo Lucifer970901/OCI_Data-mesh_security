@@ -22,7 +22,7 @@ resource "oci_logging_log" "test_log" {
         #}
 
         #Optional
-        compartment_id = oci_identity_compartment.compartmentProduct.id
+       # compartment_id = oci_identity_compartment.compartmentProduct.id
  #   }
     is_enabled = "enabled"
     retention_duration = "60"
