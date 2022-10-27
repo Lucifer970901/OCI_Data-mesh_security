@@ -38,6 +38,7 @@ resource "oci_core_internet_gateway" "test_internet_gateway" {
     provider = oci.region2
     compartment_id = oci_identity_compartment.compartmentNetworking.id
     vcn_id         = oci_core_vcn.test_vcn.id
+    display_name = "internet_gateway"
    # route_table_id = oci_core_route_table.publicRT.id
 }
 
@@ -45,7 +46,7 @@ resource "oci_core_nat_gateway" "test_nat_gateway" {
     #Required
     compartment_id = oci_identity_compartment.compartmentNetworking.id
     vcn_id = oci_core_vcn.test_vcn.id
-
+    display_name = "nat_gateway"
     #Optional
     #route_table_id = oci_core_route_table.privateRT.id
 }
@@ -55,6 +56,7 @@ resource "oci_core_route_table" "publicRT" {
     provider = oci.region2
     vcn_id = oci_core_vcn.test_vcn.id
     compartment_id = oci_identity_compartment.compartmentNetworking.id
+    display_name = "public_route_table"
 
   route_rules {
     destination       = "0.0.0.0/0"
@@ -67,7 +69,7 @@ resource "oci_core_route_table" "privateRT" {
     provider = oci.region2
     vcn_id = oci_core_vcn.test_vcn.id
     compartment_id = oci_identity_compartment.compartmentNetworking.id
-
+    display_name = "private_route_table"
   route_rules {
     destination       = "0.0.0.0/0"
     network_entity_id = oci_core_nat_gateway.test_nat_gateway.id
