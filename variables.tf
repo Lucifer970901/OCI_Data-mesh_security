@@ -121,6 +121,7 @@ variable "sales_application_display_name" {
 description = "data flow application name"
  default = "Sales_application"
 }
+#please make sure to change the "apaccpt03" to your tenancy name
 variable "product_application_file_uri"{
 default = "oci://Product_Bucket@apaccpt03/dataflow_object.py"
 }
@@ -192,4 +193,26 @@ variable "is_log_enabled"{
 default = "1"
 }
 
+#API gateway variables
+variable "gateway_endpoint_type"{
+default = "PRIVATE"
+}
 
+variable "deployment_path_prefix"{
+default = "/v1"
+}
+variable "deployment_specification_routes_backend_type"{
+default = "HTTP_BACKEND"
+}
+
+variable "deployment_specification_routes_backend_url"{
+default = "https://api.weather.gov"
+}
+
+variable "deployment_specification_routes_path"{
+default = "/hello"
+}
+
+variable "deployment_specification_routes_methods"{
+default = ["GET"]
+}
