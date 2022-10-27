@@ -46,7 +46,7 @@ resource "oci_dataflow_application" "customer_application" {
     #Required
     provider = oci.region2
     compartment_id = oci_identity_compartment.compartmentCustomer.id
-    display_name = var.product_application_display_name
+    display_name = var.customer_application_display_name
     driver_shape = var.application_driver_shape
     executor_shape = var.application_executor_shape
     file_uri = var.customer_application_file_uri
@@ -77,7 +77,7 @@ resource "oci_dataflow_application" "sales_application" {
     #Required
     provider = oci.region2
     compartment_id = oci_identity_compartment.compartmentSales.id
-    display_name = var.product_application_display_name
+    display_name = var.sales_application_display_name
     driver_shape = var.application_driver_shape
     executor_shape = var.application_executor_shape
     file_uri = var.sales_application_file_uri
