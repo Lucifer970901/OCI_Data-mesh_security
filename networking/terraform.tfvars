@@ -1,10 +1,10 @@
-tenancy_id="<tenancy_ocid>"
-user_id="<user_ocid>"
-api_fingerprint="<api_fingreprint>"
-api_private_key_path="<private_Key_Path>"
-#Parent_compartment_id="<compartment_ocid>"
+tenancy_id="ocid1.tenancy.oc1..aaaaaaaalylrk6bjiuxqryukd6jrlxgfbwjuulnavxqehvv3crknt7ewhlpa"
+user_id="ocid1.user.oc1..aaaaaaaaxtciqwuwtcvf37ef3oey5qunm27pns4gq2w56bxold73lstsmaeq"
+api_fingerprint="09:fd:0f:58:f5:d3:d0:c4:7d:f8:6a:a6:de:19:c2:fd"
+api_private_key_path="/data/oci_api_key.pem"
+#Parent_compartment_id="ocid1.tenancy.oc1..aaaaaaaalylrk6bjiuxqryukd6jrlxgfbwjuulnavxqehvv3crknt7ewhlpa"
 ### Region
-region="<region>"
+region="us-ashburn-1"
 vcn_dns_label="fin"
 network_compartment="<compartment_ocid>"
 #Subnets
